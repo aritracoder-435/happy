@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday 🎂</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            min-height: 100dvh;
+            background: linear-gradient(135deg, #000428, #004e92);
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Birthday Section */
+
+        .container {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            animation: zoom 2s infinite alternate;
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 55px);
+            color: white;
+            text-shadow:
+                0 0 10px #ff00ff,
+                0 0 20px #00ffff,
+                0 0 40px #ff00ff;
+        }
+
+        .emoji {
+            font-size: clamp(40px, 7vw, 70px);
+            margin-top: 25px;
+            animation: bounce 1s infinite;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: clamp(16px, 3vw, 25px);
+            color: #fff;
+            text-shadow: 0 0 15px #00ffff;
+            line-height: 1.4;
+        }
+
+        /* DESTINY Section */
+
+        .destiny-section {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px 100px;
+            text-align: center;
+        }
+
+        .destiny-title {
+            color: white;
+            font-size: clamp(28px, 5vw, 50px);
+            margin-bottom: 15px;
+
+            text-shadow:
+                0 0 10px #ff00ff,
+                0 0 20px #00ffff,
+                0 0 40px #ff00ff;
+
+            animation: titleGlow 2s infinite alternate;
+        }
+
+        .destiny-subtitle {
+            color: #ffffff;
+            font-size: clamp(15px, 2.5vw, 22px);
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px #00ffff;
+        }
+
+        /* Photo Gallery */
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+
+        .photo-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 12px;
+            border-radius: 20px;
+
+            box-shadow:
+                0 0 15px rgba(0, 255, 255, 0.3),
+                0 0 30px rgba(255, 0, 255, 0.2);
+
+            backdrop-filter: blur(8px);
+
+            transition: 0.4s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px) scale(1.02);
+
+            box-shadow:
+                0 0 25px #00ffff,
+                0 0 45px #ff00ff;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: auto;
+            max-height: 650px;
+            object-fit: cover;
+            display: block;
+            border-radius: 15px;
+        }
+
+        .photo-caption {
+            color: white;
+            font-size: clamp(14px, 2vw, 19px);
+            margin-top: 15px;
+            padding-bottom: 5px;
+            text-shadow: 0 0 10px #00ffff;
+        }
+
+        /* Animations */
+
+        @keyframes zoom {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.08);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes titleGlow {
+            from {
+                text-shadow:
+                    0 0 10px #ff00ff,
+                    0 0 20px #00ffff;
+            }
+
+            to {
+                text-shadow:
+                    0 0 20px #ff00ff,
+                    0 0 40px #00ffff,
+                    0 0 60px #ff00ff;
+            }
+        }
+
+        /* Balloons */
+
+        .balloon {
+            position: fixed;
+            font-size: clamp(30px, 5vw, 45px);
+            animation: float 6s linear infinite;
+            z-index: -1;
+        }
+
+        .b1 {
+            left: 10%;
+            bottom: -100px;
+            animation-delay: 0s;
+        }
+
+        .b2 {
+            left: 30%;
+            bottom: -100px;
+            animation-delay: 2s;
+        }
+
+        .b3 {
+            left: 70%;
+            bottom: -100px;
+            animation-delay: 1s;
+        }
+
+        .b4 {
+            left: 90%;
+            bottom: -100px;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-120vh);
+            }
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                min-height: 100dvh;
+            }
+
+            h1 {
+                font-size: clamp(24px, 8vw, 40px);
+                line-height: 1.2;
+            }
+
+            .emoji {
+                font-size: clamp(35px, 12vw, 60px);
+                margin-top: 20px;
+            }
+
+            .message {
+                font-size: clamp(15px, 4.5vw, 22px);
+                padding: 0 10px;
+            }
+
+            .destiny-section {
+                padding: 40px 10px 70px;
+            }
+
+            .photo-gallery {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .photo-card {
+                padding: 8px;
+                border-radius: 15px;
+            }
+
+            .photo-card img {
+                border-radius: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Balloons -->
+
+    <div class="balloon b1">🎈</div>
+    <div class="balloon b2">🎈</div>
+    <div class="balloon b3">🎈</div>
+    <div class="balloon b4">🎈</div>
+
+
+    <!-- Birthday Section -->
+
+    <div class="container">
+
+        <div>
+
+            <h1>
+                🅷🅰🅿🅿🆈 🅱🅸🆁🆃🅷🅳🅰🆈
+            </h1>
+
+            <div class="emoji">
+                🎂🎉💝🫂
+            </div>
+
+            <div class="message">
+                Wishing you lots of happiness, love & success! ❤️✨
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Moment of DESTINY -->
+
+    <section class="destiny-section">
+
+        <h2 class="destiny-title">
+            moment of 𝑫𝑬𝑺𝑻𝑰𝑵𝒀 ✨
+        </h2>
+
+        <p class="destiny-subtitle">
+            Some moments become beautiful memories forever. ❤️
+        </p>
+
+
+        <!-- Photos -->
+
+        <div class="photo-gallery">
+
+            <div class="photo-card">
+
+                <img src="anshupic.jpeg" alt="Moment of Destiny">
+
+                <div class="photo-caption">
+                    ✨ A beautiful moment ✨
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="anshupicccccc.jpeg" alt="Moment of Destiny">
+
+                <div class="photo-caption">
+                    💙 Memories that stay forever 💙
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
